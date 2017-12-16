@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Feedback extends AppCompatActivity {
+public class    Feedback extends AppCompatActivity {
     private EditText editTextSubjek, editTextPesan;
     private Button buttonSubmit, buttonReset;
     @Override

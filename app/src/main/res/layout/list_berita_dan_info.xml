@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="8dp"
+    android:id="@+id/cardviewBerita">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="8dp"
+            android:src="@drawable/logo"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_marginLeft="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <TextView
+                android:id="@+id/authorBerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="admin, Sel, 8-Agt-2017 06:20:56 "
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:layout_marginRight="8dp"/>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
+            <TextView
+                android:id="@+id/judulBerita"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kunjungan LPPM STMIK AKAKOM ke Universitas Mercubuana Yogyakarta"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
