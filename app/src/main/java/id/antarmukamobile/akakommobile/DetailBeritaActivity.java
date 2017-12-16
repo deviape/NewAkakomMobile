@@ -23,6 +23,5 @@ public class DetailBeritaActivity extends AppCompatActivity {
                 ContextCompat.getColor(this, R.color.white));
         collapsingToolbarLayout.setExpandedTitleColor(
                 ContextCompat.getColor(this, R.color.white));
-
     }
 }
