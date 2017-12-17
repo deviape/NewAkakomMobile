@@ -8,14 +8,33 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.v7.widget.LinearLayoutManager;
+import  android.support.v7.widget.RecyclerView;
+import android.support.annotation.Nullable;
+import java.util.ArrayList;
+import id.antarmukamobile.akakommobile.adapter.RecyclerViewFeed;
+import id.antarmukamobile.akakommobile.modelAPI.FeedModel;
+import id.antarmukamobile.akakommobile.modelAPI.ListFeed;
 
 public class    Feedback extends AppCompatActivity {
-    private EditText editTextSubjek, editTextPesan;
+    LinearLayoutManager layoutManager;
+    ArrayList<FeedModel> models;
+    RecyclerViewFeed feedAdapter;
+    RecyclerView recyclerView;
+
+    private  EditText editTextSubjek, editTextPesan;
     private Button buttonSubmit, buttonReset;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+        recyclerView = (RecyclerView) findViewById(R.id.rv_feed);
+        models = ListFeed.getlist();
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        feedAdapter = new RecyclerViewFeed(Feedback.this, models);
+        recyclerView.setAdapter(feedAdapter);
 
         editTextSubjek=(EditText)findViewById(R.id.editTextSubjek);
         editTextPesan=(EditText)findViewById(R.id.editTextPesan);
@@ -49,4 +68,4 @@ public class    Feedback extends AppCompatActivity {
         });
 
     }
-    }
+}
