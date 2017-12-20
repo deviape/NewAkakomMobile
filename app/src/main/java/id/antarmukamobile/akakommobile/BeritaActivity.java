@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +21,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BeritaActivity extends AppCompatActivity {
+    ProgressBar progressBar;
     RecyclerView recyclerViewBerita;
     RecyclerViewBeritaDanInfo adapterBerita;
     ArrayList<String> authorBeritaList=new ArrayList<>();
     ArrayList<String> judulBeritaList=new ArrayList<>();
+    ArrayList<String> linkBeritaList=new ArrayList<>();
     public static final String BASE_URL="http://simulasi-akakom.000webhostapp.com/";
 
     @Override
@@ -31,6 +35,8 @@ public class BeritaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_berita);
 
         getSupportActionBar().setTitle("Berita Akakom");
+
+        progressBar=(ProgressBar)findViewById(R.id.progressBarBerita);
 
         recyclerViewBerita=(RecyclerView)findViewById(R.id.recyclerViewBerita);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
@@ -46,18 +52,22 @@ public class BeritaActivity extends AppCompatActivity {
         call.enqueue(new Callback<BeritaDanInfo>() {
             @Override
             public void onResponse(Call<BeritaDanInfo> call, Response<BeritaDanInfo> response) {
+                progressBar.setVisibility(View.GONE);
                 List<DataBeritaDanInfo> dataBeritaDanInfoList =response.body().getData();
                 authorBeritaList.clear();
                 judulBeritaList.clear();
+                linkBeritaList.clear();
                 for (int i = 0; i< dataBeritaDanInfoList.size(); i++){
                     String author=response.body().getData().get(i).getAuthor();
                     String judul=response.body().getData().get(i).getJudul();
+                    String link=response.body().getData().get(i).getLink();
 
                     authorBeritaList.add(author);
                     judulBeritaList.add(judul);
+                    linkBeritaList.add(link);
                 }
 
-                adapterBerita=new RecyclerViewBeritaDanInfo(BeritaActivity.this, authorBeritaList, judulBeritaList, "berita");
+                adapterBerita=new RecyclerViewBeritaDanInfo(BeritaActivity.this, authorBeritaList, judulBeritaList, linkBeritaList, "berita");
                 recyclerViewBerita.setAdapter(adapterBerita);
                 adapterBerita.notifyDataSetChanged();
             }

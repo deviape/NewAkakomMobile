@@ -24,6 +24,7 @@ public class InfoActivity extends AppCompatActivity {
     RecyclerViewBeritaDanInfo adapterInfo;
     ArrayList<String> authorInfoList =new ArrayList<>();
     ArrayList<String> judulInfoList =new ArrayList<>();
+    ArrayList<String> linkInfoList=new ArrayList<>();
     public static final String BASE_URL="http://simulasi-akakom.000webhostapp.com/";
 
     @Override
@@ -50,15 +51,18 @@ public class InfoActivity extends AppCompatActivity {
                 List<DataBeritaDanInfo> dataBeritaDanInfoList =response.body().getData();
                 authorInfoList.clear();
                 judulInfoList.clear();
+                linkInfoList.clear();
                 for (int i = 0; i< dataBeritaDanInfoList.size(); i++){
                     String author=response.body().getData().get(i).getAuthor();
                     String judul=response.body().getData().get(i).getJudul();
+                    String link=response.body().getData().get(i).getLink();
 
                     authorInfoList.add(author);
                     judulInfoList.add(judul);
+                    linkInfoList.add(link);
                 }
 
-                adapterInfo =new RecyclerViewBeritaDanInfo(InfoActivity.this, authorInfoList, judulInfoList, "info");
+                adapterInfo =new RecyclerViewBeritaDanInfo(InfoActivity.this, authorInfoList, judulInfoList, linkInfoList, "info");
                 recyclerViewInfo.setAdapter(adapterInfo);
                 adapterInfo.notifyDataSetChanged();
             }

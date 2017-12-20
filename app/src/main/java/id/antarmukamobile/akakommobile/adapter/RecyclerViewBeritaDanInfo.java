@@ -24,12 +24,14 @@ public class RecyclerViewBeritaDanInfo extends RecyclerView.Adapter<RecyclerView
     Context context;
     ArrayList<String> authorBerita;
     ArrayList<String> judulBerita;
+    ArrayList<String> linkBerita;
     String status;
 
-    public RecyclerViewBeritaDanInfo(Context context, ArrayList<String> authorBerita, ArrayList<String> judulBerita, String status) {
+    public RecyclerViewBeritaDanInfo(Context context, ArrayList<String> authorBerita, ArrayList<String> judulBerita, ArrayList<String> linkBerita, String status) {
         this.context = context;
         this.authorBerita = authorBerita;
         this.judulBerita = judulBerita;
+        this.linkBerita = linkBerita;
         this.status = status;
     }
 
@@ -39,7 +41,7 @@ public class RecyclerViewBeritaDanInfo extends RecyclerView.Adapter<RecyclerView
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.textViewAuthor.setText(authorBerita.get(position));
         holder.textViewJudul.setText(judulBerita.get(position));
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,7 @@ public class RecyclerViewBeritaDanInfo extends RecyclerView.Adapter<RecyclerView
             public void onClick(View view) {
                 if (status.equals("berita")){
                     Intent intent=new Intent(context, DetailBeritaActivity.class);
+                    intent.putExtra("link", linkBerita.get(position));
                     context.startActivity(intent);
                 }
             }

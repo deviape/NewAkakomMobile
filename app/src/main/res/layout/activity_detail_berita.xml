@@ -21,10 +21,10 @@
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <ImageView
+                android:id="@+id/imageBerita"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                android:background="@drawable/kunjunganum"
                 app:layout_collapseMode="parallax"/>
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -34,6 +34,11 @@
                 app:layout_collapseMode="pin" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
+    <ProgressBar
+        android:id="@+id/progressBarDetailBerita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,20 +49,20 @@
             android:orientation="vertical"
             android:padding="16dp">
             <TextView
+                android:id="@+id/judulBerita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="KUNJUNGAN INDUSTRI SMK UMAR FATAH KE STMIK AKAKOM"
+                android:text=""
                 android:textColor="#000000"
                 android:textAlignment="center"
                 android:textSize="16sp"/>
             <TextView
+                android:id="@+id/contentBerita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="#000000"
-                android:text="Yogyakarta, 21 November 2017-Perkembangan IT pada sebuah negara mampu meningkatkan kinerja  yang ada, sehingga negara tersebut bisa dikatakan sebagai negara maju. IT berperan penting dalam pendidikan, maka SMK UMAR FATAH mengadakan  kunjungan industri bagi siswa kelas 11 yang terdiri dari kompetensi keahlian Multimedia, Rekayasa Perangkat Lunak, dan Teknik Komputer dan Jaringan ke STMIK AKAKOM dengan jumlah peserta sebanyak 80 orang. STMIK AKAKOM merupakan sekolah  tinggi IT yang tertua di Yogyakarta dan institusi yang sudah terakreditasi B.
-
-Acara yang diselenggarakan di ruang presentasi tersebut dibuka oleh Ir. Totok Prawoto, M.M., M.T. dan dilanjutkan materi yang disampaikan oleh Bapak Kuindra Irianto tentang Arduino. Arduino sangat populer di dunia karena banyak  sekali pemula yang belajar mengenal robotika dan elektronika lewat Arduino. Kegiatan belajar yang berlangsung sampai tengah hari pun tak menyurutkan semangat para siswa SMK UMAR FATAH untuk belajar dan mengenal lebih dekat dengan STMIK AKAKOM. Dari kunjungan industri inilah siswa diharapkan dapat memberikan gambaran bagaimana teknologi berkembang dan teknologi yang dibuat dapat diwujudkan dalam  dunia nyata."/>
+                android:text=""/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
