@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AkakomMobile.iml" filepath="$PROJECT_DIR$/AkakomMobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NewAkakomMobile.iml" filepath="$PROJECT_DIR$/NewAkakomMobile.iml" />
+      <module fileurl="file://E:\projek\Android\NewAkakomMobile\AkakomMobile.iml" filepath="E:\projek\Android\NewAkakomMobile\AkakomMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/NewAkakomMobile.iml" filepath="$PROJECT_DIR$/.idea/NewAkakomMobile.iml" />
+      <module fileurl="file://E:\projek\Android\NewAkakomMobile\NewAkakomMobile.iml" filepath="E:\projek\Android\NewAkakomMobile\NewAkakomMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
