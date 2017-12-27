@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "527825496034",
+    "firebase_url": "https://akakomfeed.firebaseio.com",
+    "project_id": "akakomfeed",
+    "storage_bucket": "akakomfeed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527825496034:android:29bc11368beb7c28",
+        "android_client_info": {
+          "package_name": "id.antarmukamobile.akakommobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527825496034-d208h5q1abjh7hbikjavnd0peen31npm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_vV4aQ5M1g8zs5KUwFw01vbdIoQrISQ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
