@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.antarmukamobile.akakommobile.BeritaActivity">
+    tools:context="id.antarmukamobile.akakommobile.ui.BeritaActivity">
     <ProgressBar
         android:id="@+id/progressBarBerita"
         android:layout_width="wrap_content"

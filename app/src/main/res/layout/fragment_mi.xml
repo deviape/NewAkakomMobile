@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="id.antarmukamobile.akakommobile.ui.fragment.MiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+            <ImageView
+                android:background="@drawable/hmjmi"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:id="@+id/imgMI"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgMI"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:text="@string/mi"
+                android:layout_margin="12dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</FrameLayout>

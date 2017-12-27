@@ -1,4 +1,4 @@
-package id.antarmukamobile.akakommobile;
+package id.antarmukamobile.akakommobile.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +12,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import  android.support.v7.widget.RecyclerView;
 import android.support.annotation.Nullable;
 import java.util.ArrayList;
+
+import id.antarmukamobile.akakommobile.R;
 import id.antarmukamobile.akakommobile.adapter.RecyclerViewFeed;
 import id.antarmukamobile.akakommobile.modelAPI.FeedModel;
 import id.antarmukamobile.akakommobile.modelAPI.ListFeed;

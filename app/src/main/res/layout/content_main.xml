@@ -8,31 +8,13 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main"
-    tools:context="id.antarmukamobile.akakommobile.MainActivity">
+    tools:context="id.antarmukamobile.akakommobile.ui.MainActivity">
 
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        app:pager_animation="Accordion"
-        app:auto_cycle="true"
-        app:indicator_visibility="visible"
-        app:pager_animation_span="1100"
         android:layout_height="200dp"/>
 
-    <com.daimajia.slider.library.Indicators.PagerIndicator
-        android:id="@+id/custom_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"
-        />
-    <com.daimajia.slider.library.Indicators.PagerIndicator
-        android:id="@+id/custom_indicator2"
-        style="@style/AndroidImageSlider_Corner_Oval_Orange"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

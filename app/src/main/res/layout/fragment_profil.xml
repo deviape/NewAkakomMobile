@@ -1,13 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.antarmukamobile.akakommobile.ProfilFragment">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="id.antarmukamobile.akakommobile.ui.fragment.ProfilFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:background="@drawable/akakaom"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="tes" />
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text="@string/profile"
+        android:padding="12dp"/>
 
-</FrameLayout>
+
+
+</LinearLayout>

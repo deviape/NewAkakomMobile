@@ -29,11 +29,12 @@
                 android:text="admin, Sel, 8-Agt-2017 06:20:56 "
                 android:textAlignment="textEnd"
                 android:gravity="end"
+                android:textSize="12sp"
                 android:layout_marginRight="8dp"/>
             <View
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="#000000"/>
             <TextView
                 android:id="@+id/judulBerita"
@@ -42,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Kunjungan LPPM STMIK AKAKOM ke Universitas Mercubuana Yogyakarta"
                 android:textColor="#000000"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_marginLeft="8dp"/>
         </LinearLayout>
     </RelativeLayout>

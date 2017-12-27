@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true"
-    app:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp">
+    app:cardCornerRadius="2dp"
+    android:layout_margin="8dp">
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="4dp"
-    android:background="@drawable/custom_bg">
+    android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/gambarOrang"
             android:layout_width="117dp"
-            android:layout_height="124dp"
+            android:layout_height="90dp"
             android:src="@drawable/logo" />
 
          <TextView
@@ -37,6 +35,8 @@
             android:id="@+id/nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000"
             android:layout_marginTop="13dp"
             android:layout_marginLeft="10dp"
             android:layout_alignParentEnd="true"
