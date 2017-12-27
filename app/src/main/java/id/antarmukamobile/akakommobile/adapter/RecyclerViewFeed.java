@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import java.util.ArrayList;
 import id.antarmukamobile.akakommobile.R;
+import id.antarmukamobile.akakommobile.modelAPI.FeedBackFirebaseModel;
 import id.antarmukamobile.akakommobile.modelAPI.FeedModel;
 
 
@@ -18,9 +20,9 @@ import id.antarmukamobile.akakommobile.modelAPI.FeedModel;
 
 public class RecyclerViewFeed extends RecyclerView.Adapter<RecyclerViewFeed.ViewHolder> {
     private Context context;
-    private ArrayList<FeedModel> models;
+    private ArrayList<FeedBackFirebaseModel> models;
 
-    public RecyclerViewFeed(Context context, ArrayList<FeedModel> models) {
+    public RecyclerViewFeed(Context context, ArrayList<FeedBackFirebaseModel> models) {
         this.context = context;
         this.models = models;
     }
@@ -30,12 +32,14 @@ public class RecyclerViewFeed extends RecyclerView.Adapter<RecyclerViewFeed.View
         public ImageView tvGambar;
         public TextView tvNama;
         public TextView tvKomentar;
+        public RatingBar ratingBar;
 
         public ViewHolder(View v){
             super(v);
             tvGambar = (ImageView) v.findViewById(R.id.gambarOrang);
             tvNama = (TextView) v.findViewById(R.id.nama);
             tvKomentar = (TextView) v.findViewById(R.id.komentar);
+            ratingBar = (RatingBar)v.findViewById(R.id.ratingBar);
         }
 
     }
@@ -49,9 +53,9 @@ public class RecyclerViewFeed extends RecyclerView.Adapter<RecyclerViewFeed.View
 
     @Override
     public void onBindViewHolder (ViewHolder holder, int position){
-        holder.tvGambar.setImageResource(models.get(position).getGambarId());
         holder.tvNama.setText(models.get(position).getNama());
         holder.tvKomentar.setText(models.get(position).getKomentar());
+        holder.ratingBar.setRating(models.get(position).getRating());
     }
 
     @Override

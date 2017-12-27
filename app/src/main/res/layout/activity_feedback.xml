@@ -30,7 +30,7 @@
                        android:layout_height="wrap_content"
                        android:layout_marginBottom="8dp"
                        android:paddingTop="5dp"
-                       android:text="Email :" />
+                       android:text="Nama :" />
 
                    <EditText
                        android:id="@+id/editTextSubjek"
@@ -48,6 +48,15 @@
                        android:hint="Tulis pesan anda"
                        android:layout_marginBottom="8dp"
                        android:inputType="textLongMessage" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:layout_gravity="center"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -79,7 +88,15 @@
             android:layout_width="match_parent"
             android:layout_marginTop="18dp"
             android:layout_height="match_parent">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feedback dari User"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

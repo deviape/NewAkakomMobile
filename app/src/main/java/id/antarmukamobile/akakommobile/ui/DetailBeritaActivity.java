@@ -73,7 +73,7 @@ public class DetailBeritaActivity extends AppCompatActivity {
                 textViewJudulBerita.setText(judul);
                 textViewContentBerita.setText(conten);
                 Picasso.with(DetailBeritaActivity.this)
-                        .load(gambar)
+                        .load(gambar).error(getResources().getDrawable(R.drawable.logo))
                         .into(imageViewBerita);
                 /*Picasso.with(DetailBeritaActivity.this)
                         .load(gambar)
