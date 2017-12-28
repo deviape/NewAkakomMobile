@@ -74,25 +74,8 @@ public class DetailBeritaActivity extends AppCompatActivity {
                 textViewContentBerita.setText(conten);
                 Picasso.with(DetailBeritaActivity.this)
                         .load(gambar).error(getResources().getDrawable(R.drawable.logo))
+                        .fit()
                         .into(imageViewBerita);
-                /*Picasso.with(DetailBeritaActivity.this)
-                        .load(gambar)
-                        .into(new Target() {
-                            @Override
-                            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                                imageViewBerita.setBackground(new BitmapDrawable(getResources(), bitmap));
-                            }
-
-                            @Override
-                            public void onBitmapFailed(Drawable errorDrawable) {
-                                Log.d("TAG", "FAILED");
-                            }
-
-                            @Override
-                            public void onPrepareLoad(Drawable placeHolderDrawable) {
-                                Log.d("TAG", "PREPARE LOAD");
-                            }
-                        });*/
             }
 
             @Override

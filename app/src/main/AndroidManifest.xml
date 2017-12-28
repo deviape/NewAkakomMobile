@@ -25,6 +25,7 @@
         <activity android:name=".ui.Feedback" />
         <activity android:name=".ui.BeritaActivity" />
         <activity android:name=".ui.Tautan" />
+        <activity android:name=".ui.TautanWebView" />
         <activity android:name=".ui.InfoActivity" />
         <activity
             android:name=".ui.DetailBeritaActivity"
