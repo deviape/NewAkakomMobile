@@ -17,10 +17,10 @@
         android:layout_height="match_parent"
         android:textAlignment="center"
         android:text="
-        Visi
+        Visi\n
         STMIK AKAKOM mempunyai visi untuk menjadi perguruan tinggi unggulan dalam bidang teknologi informasi yang bertumpu pada nilai-nilai dan etika kehidupan yang baik, benar dan universal untuk mewujudkan peningkatan taraf hidup bangsa.
-
-        Misi
+\n
+        Misi  \n
         Adapun misi STMIK AKAKOM adalah melaksanakan Tridharma Perguruan Tinggi dalam bidang komputer dan teknologi informasi yang berorientasi kepada perkembangan ilmu pengetahuan, teknologi dan seni.
         "/>
 

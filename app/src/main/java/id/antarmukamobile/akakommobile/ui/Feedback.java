@@ -91,18 +91,7 @@ public class    Feedback extends AppCompatActivity {
                 editTextSubjek.setText("");
                 editTextPesan.setText("");
                 ratingBar.setStepSize(0);
-                Log.i("Send email", "");
 
-//                String[] TO = {"info@akakom.ac.id"};
-//
-//                Intent intent = new Intent(Intent.ACTION_SEND);
-//                intent.setData(Uri.parse("mailto:"));
-//                intent.setType("text/html");
-//                intent.putExtra(Intent.EXTRA_EMAIL, TO);
-//                intent.putExtra(Intent.EXTRA_SUBJECT, editTextSubjek.getText().toString());
-//                intent.putExtra(Intent.EXTRA_TEXT, editTextPesan.getText().toString());
-//
-//                startActivity(Intent.createChooser(intent, "Send Feedback"));
             }
         });
 
