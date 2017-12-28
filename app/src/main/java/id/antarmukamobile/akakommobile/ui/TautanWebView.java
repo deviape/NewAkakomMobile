@@ -54,10 +54,16 @@ public class TautanWebView extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 swipeRefreshLayout.setRefreshing(false);
+                swipeRefreshLayout.setEnabled(false);
             }
         });
 
         url = getIntent().getStringExtra("link");
         webView.loadUrl(url);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

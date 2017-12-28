@@ -3,6 +3,7 @@ package id.antarmukamobile.akakommobile.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,7 @@ public class    Feedback extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         recyclerView = (RecyclerView) findViewById(R.id.rv_feed);
         models = ListFeed.getlist();
 
@@ -79,13 +81,16 @@ public class    Feedback extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                int nilai = Math.round(ratingBar.getRating());
+                Log.d("nilai",nilai + "");
                 model.setKomentar(editTextPesan.getText().toString());
                 model.setNama(editTextSubjek.getText().toString());
-                model.setRating(ratingBar.getNumStars());
+                model.setRating(nilai);
                 String  id = UUID.randomUUID().toString();
-                databaseReference.child("Feedback").child(id).setValue(model);
+                databaseReference.child("Feedback").child(editTextSubjek.getText().toString()).setValue(model);
                 editTextSubjek.setText("");
                 editTextPesan.setText("");
+                ratingBar.setStepSize(0);
                 Log.i("Send email", "");
 
 //                String[] TO = {"info@akakom.ac.id"};
@@ -110,4 +115,20 @@ public class    Feedback extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+

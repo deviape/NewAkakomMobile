@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ public class Tautan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tautan);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         recyclerViewTautan = (RecyclerView)findViewById(R.id.rviewTautan);
 
         link.add("http://www.widyabaktiyk.or.id/");
@@ -58,5 +60,20 @@ public class Tautan extends AppCompatActivity {
         recyclerViewTautan.setAdapter(adapterTautan);
         adapterTautan.notifyDataSetChanged();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return  true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
